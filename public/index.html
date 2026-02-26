@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Carbon Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="notification-bar">
+  <h3>🔔 Notifications</h3>
+  <ul id="notifications"></ul>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<div class="container">
+  <h1>🌍 Smart Carbon Calculator</h1>
+
+  <div class="card">
+    <input type="number" id="electricity" placeholder="Electricity Units">
+    <input type="number" id="acHours" placeholder="AC Hours per Day">
+    
+    <select id="transport">
+      <option value="Private">Private Transport</option>
+      <option value="Public">Public Transport</option>
+    </select>
+
+    <input type="number" id="shopping" placeholder="Online Shopping / Month">
+    
+    <button onclick="calculate()">Calculate Impact</button>
+  </div>
+
+  <div class="result-card">
+    <h2>Your Carbon Impact</h2>
+    <p id="co2"></p>
+
+    <div class="meter">
+      <div id="meterFill"></div>
+    </div>
+
+    <p id="rating"></p>
+    <div class="ai-box">
+      <p id="advice"></p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
