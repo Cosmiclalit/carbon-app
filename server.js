@@ -6,7 +6,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 require("dotenv").config();
 const { GoogleGenAI } = require("@google/genai");
-const Carbon = require("./models/carbon");
+const Carbon = require("./models/Carbon");
 
 const app = express();
 const server = http.createServer(app);
